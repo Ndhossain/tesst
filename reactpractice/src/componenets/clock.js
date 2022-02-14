@@ -14,9 +14,15 @@ class Clock extends React.Component {
     }
 
     handleClick = () => {
-        this.setState({
-            locale: 'en-US',
-        });
+        const { locale } = this.state;
+        // eslint-disable-next-line no-unused-expressions
+        locale === 'bn-BD'
+            ? this.setState({
+                  locale: 'en-US',
+              })
+            : this.setState({
+                  locale: 'bn-BD',
+              });
     };
 
     tick() {
